@@ -1,0 +1,53 @@
+{
+  "env": {
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "import"],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "assets": "./src/assets",
+          "components": "./src/components",
+          "constants": "./src/constants",
+          "pages": "./src/pages",
+          "routes": "./src/routes",
+          "services": "./src/services",
+          "theme": "./src/theme",
+          "utils": "./src/utils"
+        }
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/state-in-constructor": "off",
+    "react/static-property-placement": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
+    "import/no-cycle": "off"
+  }
+}
